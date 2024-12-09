@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 60px; /* Altura del encabezado */
+    background: url('../images/banner.jpg') no-repeat center center; /* Imagen de fondo centrada */
+    color: #fff;
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio del encabezado */
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+    display: flex; /* Usar flexbox para alinear contenido dentro del header */
+    justify-content: space-between; /* Distribuir los elementos a izquierda y derecha */
+    padding: 0 20px; /* Espaciado interno para los bordes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
+}
+
+/* Contenedor del contenido dentro del encabezado */
+#encabezado {
+    width: 100%; /* Asegura que el contenido interno ocupe todo el ancho del header */
+    display: flex; /* Usar flexbox para organizar los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: space-between; /* Distribuir texto y botón */
+}
+
+/* Título dentro del encabezado */
+#encabezado .title {
+    font-size: 1.8em; /* Tamaño del texto */
+    color: #fff; /* Texto blanco */
+}
+
+/* Botón de cerrar sesión */
+#encabezado .logout-button {
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: #ff5c5c; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    text-align: center; /* Centrar el texto dentro del botón */
+    text-decoration: none; /* Eliminar subrayado si es un enlace */
+}
+/* Enlace de cerrar sesión */
+.logout-link {
+    text-decoration: none; /* Eliminar subrayado */
+    color: #fff; /* Texto blanco */
+    font-weight: bold; /* Negrita */
+    background-color: #ff5c5c; /* Fondo rojo */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #ff2f2f; /* Fondo rojo más oscuro al pasar el cursor */
+}
+
+/* Información debajo del header */
+.info-section {
+    margin-top: 60px; /* Alinear justo debajo del header */
+    padding: 15px 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    font-size: 1em;
+    color: #333;
+}
+#encabezado .logout-button:hover {
+    background-color: #ff2f2f; /* Fondo más oscuro al pasar el cursor */
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    margin-top: 50px; /* Espacio para el header fijo */
+    flex: 1;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina los espacios entre bordes */
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+table th, table td {
+    padding: 10px 15px; /* Espaciado interno de las celdas */
+    text-align: left; /* Alineación del texto */
+    border-bottom: 1px solid #ddd; /* Línea divisoria */
+    color: #333; /* Color del texto */
+}
+
+table th {
+    background-color: #333; /* Fondo oscuro para encabezados */
+    color: white; /* Texto blanco para los encabezados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Negrita */
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alterna el color de las filas */
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* Color destacado al pasar el cursor */
+}
+
+table td:last-child {
+    text-align: center; /* Centrar el contenido de la última columna */
+}
+
+/* Estilo para el texto de resultados */
+h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Botón dentro de las tablas */
+/* Botones dentro de las tablas */
+table .btn {
+    padding: 8px 15px; /* Espaciado interno */
+    background-color: #4CAF50; /* Color verde por defecto para Editar */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.9em; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    text-align: center; /* Centrar el texto */
+    display: flex; /* Usar flexbox para alinear contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 5px; /* Espaciado entre texto e ícono */
+    width: 110px; /* Tamaño uniforme */
+}
+/* Botón para Editar */
+table .btn-edit {
+    background-color: #4CAF50; /* Color verde para Editar */
+}
+
+table .btn-edit:hover {
+    background-color: #45a049; /* Color más oscuro al pasar */
+}
+
+/* Botón para Eliminar */
+table .btn-delete {
+    background-color: #ff5c5c; /* Color rojo para Eliminar */
+}
+
+table .btn-delete:hover {
+    background-color: #ff2f2f; /* Color más oscuro al pasar */
+}
+
+/* Última columna centrada y con botones alineados a la derecha */
+table td:last-child {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Espaciado entre botones */
+}
+table .btn:hover {
+    background-color: #555;
+}
+
+/* Botones generales */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333; /* Color base oscuro */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em;
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    text-align: center;
+    text-decoration: none; /* Eliminar subrayado */
+    transition: background-color 0.3s ease; /* Animación suave */
+}
+
+/* Botón primario (Consultar) */
+.btn-primary {
+    background-color: #4CAF50; /* Verde para acciones primarias */
+}
+
+.btn-primary:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el cursor */
+}
+
+/* Estilo para el formulario de consulta */
+.consulta-form {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 500px; /* Ancho máximo */
+    margin-left: auto;
+    margin-right: auto; /* Centrado */
+}
+
+/* Grupo de formulario */
+.form-group {
+    margin-bottom: 20px; /* Separación entre campos */
+}
+
+
+
+/* Entrada de texto */
+.consulta-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.consulta-form label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    margin-top: auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+
+    .taller {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .taller img {
+        max-width: 100%;
+    }
+}

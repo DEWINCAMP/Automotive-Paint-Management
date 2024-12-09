@@ -1,0 +1,55 @@
+/* Estilo general para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Bordes y color de las celdas */
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Encabezado de la tabla */
+table th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Filas con color alternado */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Efecto hover en las filas */
+table tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Centrar el contenido del texto */
+table td {
+    vertical-align: middle;
+}
+
+/* Ajuste para textos largos */
+table td, table th {
+    word-wrap: break-word;
+    max-width: 200px;
+}
+
+/* Resaltado del texto */
+table td:nth-child(1),
+table td:nth-child(2) {
+    font-weight: bold;
+    color: #333;
+}
